@@ -1,5 +1,6 @@
-# react-native-orientation-locker
-[![npm](https://img.shields.io/npm/v/react-native-orientation-locker.svg?style=flat-square)](https://www.npmjs.com/package/react-native-orientation-locker)
+# react-native-orientation-locker-without-windows
+
+> This is a fork of [react-native-orientation-locker](https://www.npmjs.com/package/react-native-orientation-locker) that removes the Windows implementation. This is because the Windows implementation is unnecessary, and can cause installation problems.
 
 A react-native module that can listen on orientation changing of device, get current orientation, lock to preferred orientation. (cross-platform support)
 
@@ -9,86 +10,12 @@ A react-native module that can listen on orientation changing of device, get cur
 * listen on orientation changing of device
 * get the current orientation of device
 
-### ChangeLog
-<details>
-  <summary>ChangeLog details</summary>
 
-v1.5.0
-1. Fix: threading issue on Windows and fix android not triggering event in some cases
-2. Fix: add stub methods to remove warning while using listeners
-
-v1.4.0
-1. Fix typescript types
-2. Fix some bugs
-
-v1.3.1 
-1. Fix require cycle problem
-
-v1.3.0 **BREAKING CHANGES**
-1. Add support for Window
-2. Modify sample project
-3. Updates Tyescript define
-
-v1.2.0 **BREAKING CHANGES**
-1. Add support for lockAllOrientationsButUpsideDown
-2. Ignore on web and desktop (#115)
-3. Fix for not finding @ReactModule (#125)
-4. Fix unlockAllOrientations on Android (#133)
-5. Implement ActivityLifecycleCallbacks on Android (#131)
-
-Please be sure to add to `onCreate` of your `MainApplication`
-```
-import org.wonday.orientation.OrientationActivityLifecycle;
-
-  @Override
-  public void onCreate() {
-    ...
-+    registerActivityLifecycleCallbacks(OrientationActivityLifecycle.getInstance());
-  }
-
-```
-v1.1.8
-1. Support FACE-UP and FACE-DOWN on iOS
-
-v1.1.7
-1. Add lockToPortraitUpsideDown() to iOS
-2. Minor case corrections
-
-v1.1.6
-1. Catch unknown device orientation value
-2. When calling unlockAllOrientations(), forcibly unlock whether locked or not
-
-v1.1.5
-1. Add Orientation.isLocked() and Orientation.removeAllListeners()
-
-v1.1.4
-1. Fix TypeScript declarations
-
-v1.1.3
-1. Add `addLockListener` and `removeLockListener`
-2. Improve Android orientation changed event sending condition
-
-v1.1.2
- 1. Improve Android orientation changed event timing
-
-v1.1.1
- 1. Fix show "supported event type for deviceOrientationDidChange..." error in debug
- 2. Fix getAutoRotateState() code error
-
-
-v1.1.0 **BREAKING CHANGES**  
- 1. Split ```addOrientationListener(function(orientation, deviceOrientation))``` to ```addOrientationListener(function(orientation))``` and ```addDeviceOrientationListener(function(deviceOrientation))```
- 2. Make sure when lockToXXX and unlockAllOrientations resend UI orientation event
- 3. remove setTimout from orientation listener
- 4. Add getAutoRotateState() for Android
- 5. Add TypeScript definitions
-
-[[more]](https://github.com/wonday/react-native-orientation-locker/releases)
-</details>
+ 
 
 ### Notice
 
-1. RN 0.58 + Android target SDK 27 maybe cause 
+1. RN 0.58 + Android target SDK 27 may cause 
 ```Issue: java.lang.IllegalStateException: Only fullscreen activities can request orientation``` problem, 
 see [[#55]](https://github.com/wonday/react-native-orientation-locker/issues/55) for a solution.
 
@@ -99,37 +26,21 @@ Simply disable upside down for iPad and everything works like a charm ([[#78]](h
 ```ld: library not found for -lRCTOrientation-tvOS```
 Just remove it from linked libraries and frameworks
 
-4. For Windows, locking to an orientation will only work on devices in tablet mode.
-
-5. For Windows, getting information on device orientation and tracking its changes will only be possible on devices with an orientation sensor. If the device running your application does not have the appropriate hardware to support tracking device orientation, `getDeviceOrientation()` will return UNKNOWN.
-
-#### To run example on Windows Tablet (This will allow one to view modules full functionality)
-1. Open example/windows/example.sln in Visual Studio. 
-2. Go to Project > Publish > Create App Packages.
-3. Certificate password is "password".
-4. Select "Sideloading" and hit "Next".
-5. Hit "Yes, use the current certificate" and hit "Next".
-6. Choose desired output location and hit "Create".
-7. Got to output location and copy example_<version>_Test directory over to tablet device.
-8. On tablet device open APPXBUNDLE File and hit "Install" (make sure tablet is in developer mode). App should launch after install is complete.
-9. Turn on tablet mode on device to see locking to a UI orientation functionality. 
-
 ### Installation
 #### Using yarn (RN 0.60 and and above)
 
 ```
-    yarn add react-native-orientation-locker
+    yarn add react-native-orientation-locker-without-windows
 ```
 
 
 #### Using yarn (RN 0.59 and and below)
 
 ```
-    yarn add react-native-orientation-locker
-    react-native link react-native-orientation-locker
+    yarn add react-native-orientation-locker-without-windows
+    react-native link react-native-orientation-locker-without-windows
 ```
 #### Manual linking
-For Windows, if you are using RNW v0.63.0 or higher, autolinking should link the module for you. Otherwise, you must follow the steps outlined [here](https://microsoft.github.io/react-native-windows/docs/native-modules-using) for linking module.
 
 Add following to MainApplication.java
 (This will be added automatically by auto link. If not, please manually add the following )
@@ -226,11 +137,11 @@ Add following to MainApplication.java
 ### Imperative API
 
 Whenever you want to use it within React Native code now you can:
-`import Orientation from 'react-native-orientation-locker';`
+`import Orientation from 'react-native-orientation-locker-without-windows';`
 
 ```js
 
-import Orientation from 'react-native-orientation-locker';
+import Orientation from 'react-native-orientation-locker-without-windows';
 
 
   _onOrientationDidChange = (orientation) => {
@@ -252,7 +163,7 @@ import Orientation from 'react-native-orientation-locker';
     } else {
       //do other stuff
     }
-  },
+  };
 
   componentDidMount() {
 
@@ -290,7 +201,7 @@ It is possible to have multiple `OrientationLocker` components mounted at the sa
 ```js
 import React, { useState } from "react";
 import { Text, View } from "react-native";
-import { OrientationLocker, PORTRAIT, LANDSCAPE } from "react-native-orientation-locker";
+import { OrientationLocker, PORTRAIT, LANDSCAPE } from "react-native-orientation-locker-without-windows";
 
 export default function App() {
   const [showVideo, setShowVideo] = useState(true);
@@ -385,4 +296,4 @@ orientation can return one of:
 - `FACE-DOWN`
 - `UNKNOWN`
 
-Notice: PORTRAIT-UPSIDEDOWN is currently not supported on iOS at the moment. FACE-UP and FACE-DOWN are only supported on iOS and Windows.
+Notice: PORTRAIT-UPSIDEDOWN is currently not supported on iOS at the moment. FACE-UP and FACE-DOWN is only supported on iOS.
