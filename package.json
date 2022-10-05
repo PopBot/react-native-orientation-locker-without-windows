@@ -1,14 +1,14 @@
 {
-    "name": "react-native-orientation-locker",
-    "version": "1.5.0",
-    "summary": "A react-native module that can listen on orientation changing of device",
-    "description": "A react-native module that can listen on orientation changing of device, get current orientation, lock to preferred orientation.",
-    "homepage": "https://github.com/wonday/react-native-orientation-locker",
+    "name": "react-native-orientation-locker-without-windows",
+    "version": "1.0.0",
+    "summary": "React Native module to lock screen orientation of device. Also gets current device orientation.",
+    "description": "This is a Fork of react-native-orientation-locker that removes the Windows dependencies, which are unnecessary for iOS and Android.",
+    "homepage": "https://github.com/PopBot/react-native-orientation-locker-without-windows",
     "main": "index.js",
     "types": "index.d.ts",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/wonday/react-native-orientation-locker.git"
+        "url": "git+https://github.com/popbot/react-native-orientation-locker-without-windows.git"
     },
     "keywords": [
         "orientation",
@@ -18,12 +18,12 @@
         "screen"
     ],
     "author": {
-        "name": "Wonday",
-        "url": "https://github.com/wonday"
+        "name": "PopBot",
+        "url": "https://github.com/popbot"
     },
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/wonday/react-native-orientation-locker/issues"
+        "url": "https://github.com/popbot/react-native-orientation-locker-without-windows/issues"
     },
     "peerDependencies": {
         "react": ">=16.13.1",
