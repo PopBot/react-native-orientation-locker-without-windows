@@ -15,7 +15,6 @@
         "react-native",
         "android",
         "ios",
-        "windows",
         "screen"
     ],
     "author": {
