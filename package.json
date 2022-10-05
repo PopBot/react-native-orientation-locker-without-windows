@@ -1,6 +1,6 @@
 {
     "name": "react-native-orientation-locker-without-windows",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "summary": "React Native module to lock screen orientation of device. Also gets current device orientation.",
     "description": "This is a Fork of react-native-orientation-locker that removes the Windows dependencies, which are unnecessary for iOS and Android.",
     "homepage": "https://github.com/PopBot/react-native-orientation-locker-without-windows",
