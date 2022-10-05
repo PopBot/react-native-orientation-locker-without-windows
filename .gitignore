@@ -13,3 +13,5 @@ build
 nuget.exe
 yarn-error.log
 yarn.lock
+
+.idea
