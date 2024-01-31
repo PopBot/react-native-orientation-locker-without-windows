@@ -1,0 +1,138 @@
+repo_name: PopBot/react-native-orientation-locker-without-windows
+report_id: f5ca68d034b2227817678b4118b980d1
+version: 0.1
+repo_type: Public
+timestamp: '2024-01-31T18:50:40+00:00'
+requested_by: PopBot
+provider: github
+branch: main
+detected_tools_count: 10
+tools:
+- name: Java
+  description: A concurrent, class-based, object-oriented, language specifically designed
+    to have as few implementation dependencies as possible
+  website_url: https://www.java.com
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/995/K85ZWV2F.png
+  detection_source_url: https://github.com/PopBot/react-native-orientation-locker-without-windows
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/PopBot/react-native-orientation-locker-without-windows
+  detection_source: Repo Metadata
+- name: Objective-C
+  description: The primary programming language you use when writing software for
+    OS X and iOS
+  website_url: https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1008/xcode.png
+  detection_source_url: https://github.com/PopBot/react-native-orientation-locker-without-windows
+  detection_source: Repo Metadata
+- name: Ruby
+  description: A dynamic, interpreted, open source programming language with a focus
+    on simplicity and productivity
+  website_url: https://www.ruby-lang.org
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/989/ruby.png
+  detection_source_url: https://github.com/PopBot/react-native-orientation-locker-without-windows
+  detection_source: Repo Metadata
+- name: React
+  description: A JavaScript library for building user interfaces
+  website_url: https://reactjs.org/
+  version: 16.13.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript UI Libraries
+  image_url: https://img.stackshare.io/service/1020/OYIaJ1KK.png
+  detection_source_url: https://github.com/PopBot/react-native-orientation-locker-without-windows/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Jarod Wong
+  last_updated_on: 2022-10-05 03:44:53.000000000 Z
+- name: React Native
+  description: A framework for building native apps with React
+  website_url: http://facebook.github.io/
+  version: 0.63.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Cross-Platform Mobile Development
+  image_url: https://img.stackshare.io/service/2699/KoK6gHzp.jpg
+  detection_source_url: https://github.com/PopBot/react-native-orientation-locker-without-windows/blob/main/package-lock.json
+  detection_source: android/build.gradle
+  last_updated_by: Tom Spencer
+  last_updated_on: 2018-10-17 09:36:04.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/PopBot/react-native-orientation-locker-without-windows
+  detection_source: Repo Metadata
+- name: Gradle
+  description: A powerful build system for the JVM
+  website_url: https://www.gradle.org/
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Java Build Tools
+  image_url: https://img.stackshare.io/service/975/gradlephant-social-black-bg.png
+  detection_source_url: https://github.com/PopBot/react-native-orientation-locker-without-windows/blob/main/android/build.gradle
+  detection_source: android/build.gradle
+  last_updated_by: Wonday
+  last_updated_on: 2017-05-15 06:09:30.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/PopBot/react-native-orientation-locker-without-windows/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Wonday
+  last_updated_on: 2017-05-15 06:09:30.000000000 Z
+- name: react-native
+  description: A framework for building native apps using React
+  package_url: https://www.npmjs.com/react-native
+  version: 0.63.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16064/default_5a461d436012a0c4024534aaba303dcdb0297d24.png
+  detection_source_url: https://github.com/PopBot/react-native-orientation-locker-without-windows/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Jarod Wong
+  last_updated_on: 2022-10-05 03:44:53.000000000 Z
+  vulnerabilities:
+  - name: Regular expression denial of service in react-native
+    cve_id: CVE-2020-1920
+    cve_url: https://github.com/advisories/GHSA-7f53-fmmv-mfjv
+    detected_date: Aug 22
+    severity: high
+    first_patched: 0.64.1
